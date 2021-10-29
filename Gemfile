@@ -58,3 +58,7 @@ group :development do
   # gem "spring"
 end
 
+
+gem "faker", "~> 2.19"
+
+gem "spreadsheet", "~> 1.3"
