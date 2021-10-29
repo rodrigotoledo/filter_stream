@@ -6,7 +6,7 @@ class FileStreamController < ApplicationController
   def create
     column_numbers = params[:column_numbers].to_s.split(',').map(&:to_i)
     send_stream(filename: "streamed_data.csv") do |stream|
-      # TODO: it's time to read the XLS file
+      # TODO: it's time to read the XLSX file
       book = Spreadsheet.open # SUBMITED FILE
       book.worksheets.each do |current_worksheet|
         current_worksheet.each do |row|
