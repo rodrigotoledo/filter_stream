@@ -1,0 +1,13 @@
+<h1>FileStream#index</h1>
+<hr />
+<%= form_tag filter_and_stream_path, multipart: true do %>
+  <div class="form-group">
+    <%= label_tag :column_numbers, 'Column numbers' %>
+    <%= text_field_tag :column_numbers, '', placeholder: 'Column numbers separated by comma (0,1,4...)', class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :xls_file, 'XLS File' %>
+    <%= file_field_tag :xls_file, placeholder: 'XLS file with the content that will be extracted and streamed', class: 'form-control' %>
+  </div>
+  <button type="submit" class="btn btn-primary">Filter and stream data</button>
+<% end %>
